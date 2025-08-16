@@ -1,3 +1,5 @@
+#If salary_prediction_model.pkl is already there, then there is no need to train the model. Directly run app.py
+
 import pandas as pd
 import joblib
 import os
@@ -41,4 +43,5 @@ if not os.path.exists(MODEL_PATH):
     joblib.dump(model, MODEL_PATH)
     print(f"✅ Model trained and saved as {MODEL_PATH}")
 else:
+
     print(f"ℹ️ Model already exists at {MODEL_PATH}, not overwritten.")
